@@ -1,4 +1,4 @@
-# Testing Proposal Writing OS
+# Testing Agentic Proposals
 
 How to test the whole thing as a customer would, without touching the repository. Also follow section 5 of `SHARED-V3-CHANGES.md` and the testing sections of `SHARED-V4-CHANGES.md` to `SHARED-V6-CHANGES.md` for the shared parts.
 
@@ -10,7 +10,7 @@ Never test inside the repository: setup writes real details into it. Run the rel
 bash maintainers/make-release.sh
 ```
 
-Then unzip `dist/proposal-writing-os.zip` into a test location, for example `Documents/Proposal Writing OS test`. Each test run starts from a fresh unzip.
+Then unzip `dist/agentic-proposals.zip` into a test location, for example `Documents/Agentic Proposals test`. Each test run starts from a fresh unzip.
 
 ## 2. Run setup as a customer
 
@@ -42,11 +42,11 @@ Then unzip `dist/proposal-writing-os.zip` into a test location, for example `Doc
 - [ ] Light and dark on every page (proposals stay white); 375, 768, 1024, 1440 and 2560 pixels wide: nothing runs off the side.
 
 **Home**
-- [ ] On its own, Proposal Writing OS's Home boxes start switched on. Attached to Task List OS or Pipeline OS, they start switched off and show in Customise's hidden list.
+- [ ] On its own, Agentic Proposals's Home boxes start switched on. Attached to Agentic Task List or Agentic Pipeline, they start switched off and show in Customise's hidden list.
 
-## 4. Attached to Task List OS and Pipeline OS
+## 4. Attached to Agentic Task List and Agentic Pipeline
 
-On a scratch copy of Pipeline OS (or Task List OS), follow `ATTACHING.md` to attach this tool, then check:
+On a scratch copy of Agentic Pipeline (or Agentic Task List), follow `ATTACHING.md` to attach this tool, then check:
 - [ ] All the tools show as dropdowns in the sidebar; Home offers every tool's boxes; nothing in the other tools broke.
 - [ ] Setup didn't ask what the business sells again (it used `context/sales.md`).
 - [ ] A deal with a call written up becomes a ready client; its proposal uses the deal's call and deal check.

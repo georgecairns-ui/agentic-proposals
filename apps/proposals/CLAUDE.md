@@ -1,6 +1,6 @@
 # Proposals: standing instructions for Claude
 
-This folder is the proposals app inside Proposal Writing OS. You (Claude) and the app share one file, `data/proposals.json`. The person you work for sees it as proper software: Proposals (every proposal by where it's up to), Clients (one card per client folder, with **Write proposal**), Packages (what they sell and what it costs), each proposal laid out like the finished document in their brand, and Preferences. Read this file every time you work with proposals.
+This folder is the proposals app inside Agentic Proposals. You (Claude) and the app share one file, `data/proposals.json`. The person you work for sees it as proper software: Proposals (every proposal by where it's up to), Clients (one card per client folder, with **Write proposal**), Packages (what they sell and what it costs), each proposal laid out like the finished document in their brand, and Preferences. Read this file every time you work with proposals.
 
 The app runs at **http://localhost:4747/proposals/**, served by a small helper on this computer (`apps/server/`, started by `.claude/skills/open-the-app`). The helper reads and saves this same file, so you edit it directly as described below; the app picks up your changes within a few seconds.
 
@@ -86,7 +86,7 @@ An extra is the same, smaller: `{ "id": "x-photo-day", "name": "Photography day"
 - `sources` lists what's in the folder (and the emails and calls you saved there): `file` (the name inside the folder) and `kind`: `call`, `notes`, `email`, `brief`, `document`, `proposal` (an old proposal to them) or `other`. The app counts these on the card.
 - `ready` is your judgement: is there enough to write a good proposal? Enough means you know who they are, what they need or what's hurting, and roughly what kind of work it is. When it's `false`, `missing` lists what you'd need, in plain words ("What they want help with", "Roughly what they'd like to spend"), and the card shows it.
 - The app may add a client itself (New proposal, with a name the person typed): `addedBy: "you"`. Its folder may not exist yet: make it.
-- `pipelineDealId` links the client to a deal in Pipeline OS, when attached.
+- `pipelineDealId` links the client to a deal in Agentic Pipeline, when attached.
 
 ### A proposal
 
@@ -142,7 +142,7 @@ When the person presses **Write proposal**, **New proposal**, **Ask Claude** or 
 
 ## Client folders
 
-Everything about a client goes in their own folder: `<clientsFolder>/<client name>/`. Call notes, transcripts, emails, briefs, photos, old proposals, anything. This is how the person works with Proposal Writing OS: drop things in a folder, press Write proposal.
+Everything about a client goes in their own folder: `<clientsFolder>/<client name>/`. Call notes, transcripts, emails, briefs, photos, old proposals, anything. This is how the person works with Agentic Proposals: drop things in a folder, press Write proposal.
 
 - **You keep the folders tidy and complete.** When you find something about a client elsewhere (an email thread, a call recording, a note in the brain dump), save a short Markdown summary into their folder with a clear name (`2026-10-07 discovery call (Fathom).md`, `Emails with Dev Patel.md`), with the key facts and exact quotes that matter. Never paste whole private email threads; summaries and short quotes only. Add a line to the client's `sources`.
 - **Never delete or move their files** in a client folder. Old things go to `files/99-archive/`.
@@ -153,8 +153,8 @@ Everything about a client goes in their own folder: `<clientsFolder>/<client nam
 
 When they're attached (in `apps/installed.json`):
 
-- **Pipeline OS** (`apps/pipeline/data/pipeline.json`): read the client's deal before writing (summary, the deal check, calls, what's also needed) and link it with `pipelineDealId`. When a deal reaches its proposal stage and has no proposal, that client is ready: add the client (and a write request if `autoWrite` is on). When a proposal is marked sent, won or lost, add a suggestion to the pipeline (its `suggestions`, `kind: "task"`) to move the deal, unless the pipeline has already moved it. Never edit the pipeline's deals yourself.
-- **Task List OS** (`apps/task-list/data/tasks.json`): a new proposal ready to check, and a follow-up that's due, become suggested tasks there, in its format (`apps/task-list/CLAUDE.md`), with `"source": { "tool": "proposals", "id": "<proposal id>" }`. Don't add a task you've already added.
+- **Agentic Pipeline** (`apps/pipeline/data/pipeline.json`): read the client's deal before writing (summary, the deal check, calls, what's also needed) and link it with `pipelineDealId`. When a deal reaches its proposal stage and has no proposal, that client is ready: add the client (and a write request if `autoWrite` is on). When a proposal is marked sent, won or lost, add a suggestion to the pipeline (its `suggestions`, `kind: "task"`) to move the deal, unless the pipeline has already moved it. Never edit the pipeline's deals yourself.
+- **Agentic Task List** (`apps/task-list/data/tasks.json`): a new proposal ready to check, and a follow-up that's due, become suggested tasks there, in its format (`apps/task-list/CLAUDE.md`), with `"source": { "tool": "proposals", "id": "<proposal id>" }`. Don't add a task you've already added.
 - One check-in: if another tool has a check-in, `proposals-check-in` runs as part of it.
 
 ## Rules for editing the file safely

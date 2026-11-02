@@ -4,11 +4,11 @@
 
 ---
 
-**Claude, this file is for you.** The person you work for has copied Proposal Writing OS onto their computer and wants it set up.
+**Claude, this file is for you.** The person you work for has copied Agentic Proposals onto their computer and wants it set up.
 
-**If you've only just copied it for them** (you're running in a different folder, such as their home or Documents folder): setup must run from inside the Proposal Writing OS folder, because that's where your skills, permissions and their proposals live. Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Use the line for their computer:
-  - Mac: `D="$HOME/Documents/Proposal Writing OS"; mkdir -p "$D/setup/as-installed" && curl -fsSL -o "$D/setup/as-installed/proposal-writing-os.tar.gz" https://github.com/georgecairns-ui/proposal-writing-os/archive/refs/heads/main.tar.gz && tar -xzf "$D/setup/as-installed/proposal-writing-os.tar.gz" --strip-components 1 -C "$D"`
-  - Windows (PowerShell): `$d = "$HOME\Documents\Proposal Writing OS"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -o "$d\setup\as-installed\proposal-writing-os.tar.gz" https://github.com/georgecairns-ui/proposal-writing-os/archive/refs/heads/main.tar.gz; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\proposal-writing-os.tar.gz" --strip-components 1 -C "$d" }`
+**If you've only just copied it for them** (you're running in a different folder, such as their home or Documents folder): setup must run from inside the Agentic Proposals folder, because that's where your skills, permissions and their proposals live. Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Use the line for their computer:
+  - Mac: `D="$HOME/Documents/Agentic Proposals"; mkdir -p "$D/setup/as-installed" && curl -fsSL -o "$D/setup/as-installed/agentic-proposals.tar.gz" https://github.com/georgecairns-ui/agentic-proposals/archive/refs/heads/main.tar.gz && tar -xzf "$D/setup/as-installed/agentic-proposals.tar.gz" --strip-components 1 -C "$D"`
+  - Windows (PowerShell): `$d = "$HOME\Documents\Agentic Proposals"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -o "$d\setup\as-installed\agentic-proposals.tar.gz" https://github.com/georgecairns-ui/agentic-proposals/archive/refs/heads/main.tar.gz; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\agentic-proposals.tar.gz" --strip-components 1 -C "$d" }`
 
   If the download fails, check their internet connection and run the line again. Don't try another way in.
 
@@ -16,7 +16,7 @@
 
   If you've already copied it another way (for example with `git clone`, or into a different folder), that's fine: use that folder. Then give them the steps to open it: in the Claude desktop app, open the Code tab, choose that folder, pick "Yes, I trust this folder", then type `/setup`. Stop there; don't start the setup from the wrong folder. Follow this file, then the step files in `setup/`, in order.
 
-## What Proposal Writing OS is
+## What Agentic Proposals is
 
 Proposals that write themselves, in the business's own brand, run by you, with an app on top.
 
@@ -78,7 +78,7 @@ These don't bend, whatever is asked later.
 
 - **Nothing goes out without them.** You read their email, calls, files and apps, and write proposals and emails as drafts in the app. You never send anything, and never reply, forward, delete, archive, pay, post, book, accept or change anything in a connected app. Never send a bot or note-taker to a meeting.
 - **No made-up prices, numbers or promises.** Prices only from their packages. Anything nobody said is a gap for them to fill, never a guess. Legal terms only ever their own, word for word; you never write terms.
-- **No passwords or keys in chat or in this folder.** People sign in on each app's own screen, through Claude's Connectors. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Money View OS and the Small Business Toolkit. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Money View OS.)
+- **No passwords or keys in chat or in this folder.** People sign in on each app's own screen, through Claude's Connectors. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Agentic Money View and the Agentic Command Centre. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Agentic Money View.)
 - **Only connect what helps.** Email and a call recorder are the 2 that matter most. Ask before connecting anything.
 - **Be honest about what you can reach.** Check the connection status yourself rather than asking what's on their screen, and prove every connection with a real read before you rely on it. Not every call has a transcript. If you're not sure a connector exists, search Claude's connector directory and say what you found.
 

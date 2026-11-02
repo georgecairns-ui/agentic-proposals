@@ -1,4 +1,4 @@
-# Marketing Proposal Writing OS
+# Marketing Agentic Proposals
 
 **In one sentence:** put everything about a client in one folder, press one button, and get a proposal in your own brand with your own prices, ready to check and send.
 
@@ -24,4 +24,4 @@ Time-saving claims are marked "to check": test them on real businesses before us
 
 ## Where it leads
 
-The app's menu shows the other 7 tools, locked, with Book a free call. The install guide (non-member format, like Task List OS's and Pipeline OS's) is still to make.
+The app's menu shows the other 7 tools, locked, with Book a free call. The install guide (non-member format, like Agentic Task List's and Agentic Pipeline's) is still to make.

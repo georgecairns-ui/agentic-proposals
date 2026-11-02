@@ -1,4 +1,4 @@
-# Proposal Writing OS
+# Agentic Proposals
 
 **Put everything about a client in one folder. Get a proposal in your brand.** A free kit from [Get AI Powers](https://getaipowers.com), run by Claude.
 
@@ -8,7 +8,7 @@ Nothing goes out without you. Claude writes; you approve it, save the PDF and se
 
 **See it first:** [a clickable demo with a made-up business](https://claude.ai/artifact/MQUm4uP9YM8PNCh4sPmhs7), opening on a finished proposal.
 
-Proposal Writing OS is part of a toolkit of 7 free tools from Get AI Powers. The others (a task list, a pipeline, content, money and more) show in the app's menu, and Get AI Powers sets them up with you on a free call.
+Agentic Proposals is part of a toolkit of 7 free tools from Get AI Powers. The others (a task list, a pipeline, content, money and more) show in the app's menu, and Get AI Powers sets them up with you on a free call.
 
 ## What happens when you type /setup
 
@@ -47,12 +47,12 @@ You copy the kit, open it in the Claude desktop app (the Code tab) and type **/s
 
 1. **Open the Claude desktop app and choose the Code tab.** Any folder will do for this first step.
 2. **Ask Claude to fetch the kit.** Paste this:
-   > Copy Proposal Writing OS from https://github.com/georgecairns-ui/proposal-writing-os into a folder called "Proposal Writing OS" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up.
+   > Copy Agentic Proposals from https://github.com/georgecairns-ui/agentic-proposals into a folder called "Agentic Proposals" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up.
 
    Claude copies everything onto your computer and tells you how to open the new folder. In the desktop app, you choose the folder in the Code tab.
 
-   *For Claude, if this README is all you have:* read START-HERE.md on the repository page at https://github.com/georgecairns-ui/proposal-writing-os, then copy the folder with the Mac or Windows line in it.
-3. **In the Code tab, choose the Proposal Writing OS folder and pick "Yes, I trust this folder".** The first time, the app asks whether you trust the folder and warns that it pre-approves some permissions. Those permissions only let Claude write your proposals, your business notes and your client folders, read web pages and start the app, without stopping to ask each time. It still can't send, delete or change anything in your email or other apps.
+   *For Claude, if this README is all you have:* read START-HERE.md on the repository page at https://github.com/georgecairns-ui/agentic-proposals, then copy the folder with the Mac or Windows line in it.
+3. **In the Code tab, choose the Agentic Proposals folder and pick "Yes, I trust this folder".** The first time, the app asks whether you trust the folder and warns that it pre-approves some permissions. Those permissions only let Claude write your proposals, your business notes and your client folders, read web pages and start the app, without stopping to ask each time. It still can't send, delete or change anything in your email or other apps.
 4. **Type `/setup`.**
 
 Then it opens your proposals and gives you the link, **http://localhost:4747**. Bookmark it.
@@ -71,7 +71,7 @@ Apps connect through Claude's Connectors: each one asks you to sign in on that a
 
 ## Your information
 
-Your proposals, packages and client folders live in this folder on your computer. Claude reads your email and call recordings through the connections you approve, and saves short summaries into each client's folder. It never sends, deletes, pays or posts anything for you, and never sends a bot to your meetings. There's no Proposal Writing OS account or server; Get AI Powers can't see any of it. Read [docs/PRIVACY-AND-SAFETY.md](docs/PRIVACY-AND-SAFETY.md) for the detail.
+Your proposals, packages and client folders live in this folder on your computer. Claude reads your email and call recordings through the connections you approve, and saves short summaries into each client's folder. It never sends, deletes, pays or posts anything for you, and never sends a bot to your meetings. There's no Agentic Proposals account or server; Get AI Powers can't see any of it. Read [docs/PRIVACY-AND-SAFETY.md](docs/PRIVACY-AND-SAFETY.md) for the detail.
 
 ## Make it yours
 
@@ -79,7 +79,7 @@ Your colours and fonts, your cover, your section names, your packages, your temp
 
 ## Want it set up properly for you?
 
-Proposal Writing OS works on its own. If you'd like help building your folders, business context and Claude skills around how you really sell, Get AI Powers can help. Find us at [getaipowers.com](https://getaipowers.com).
+Agentic Proposals works on its own. If you'd like help building your folders, business context and Claude skills around how you really sell, Get AI Powers can help. Find us at [getaipowers.com](https://getaipowers.com).
 
 ## What's inside
 
@@ -96,7 +96,7 @@ skills-to-upload/      the skills Claude builds for your business, packed up to 
 files/                 your documents, with a folder per client in files/02-clients
 apps/                  the proposals app, its look (theme.css) and your proposals' look (proposals/brand/brand.css)
 docs/                  customising, privacy and safety
-maintainers/           for people developing Proposal Writing OS itself
+maintainers/           for people developing Agentic Proposals itself
 ```
 
 ## Licence
