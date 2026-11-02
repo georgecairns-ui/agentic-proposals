@@ -5,7 +5,7 @@ description: Writes a complete client proposal in the business's own brand, pack
 
 # Write a proposal
 
-This is the whole point of Proposal Writing OS: the person puts everything about a client in one folder, and you write the proposal. Do all of it yourself. Nobody is watching when the app starts you, so don't ask questions: make your best reading, and put anything you couldn't find in `gaps` so they see it.
+This is the whole point of Agentic Proposals: the person puts everything about a client in one folder, and you write the proposal. Do all of it yourself. Nobody is watching when the app starts you, so don't ask questions: make your best reading, and put anything you couldn't find in `gaps` so they see it.
 
 The proposal follows one story, the same every time: **who they are, what's hurting, how we'll fix it, how we'll deliver it, the options (one recommended), and what happens next.** The client should finish it thinking "they really listened".
 
@@ -27,7 +27,7 @@ From the request (`clientId`), or from what they said ("Hollins", a folder path,
 3. **Notes from the app.** If the request has `notes`, save them into the folder first as `<date> notes from the app.md` (with `fileName` in the title if there was one), so nothing lives only in the request. Then read them like any other file.
 4. **Their email**, if connected (`context/tools.md`): search for threads with the client's contact and their business's domain from the last 6 months. Look especially for what they confirmed in writing: budget, scope, dates, who decides. Save a short summary into the folder as `Emails with <name>.md` (key facts and the exact words that matter, never whole threads).
 5. **Their call recorder**, if connected: find calls with this client (by name, email or business). Read the transcripts. Save each as `<date> <call title> (<recorder>).md` in the folder: who was there, what they need, the pain in their own words (exact quotes), numbers, timing, objections, what was agreed.
-6. **Pipeline OS**, if attached (`apps/installed.json`): the client's deal (summary, the deal check, calls, `alsoHelp`). Link it with `pipelineDealId`.
+6. **Agentic Pipeline**, if attached (`apps/installed.json`): the client's deal (summary, the deal check, calls, `alsoHelp`). Link it with `pipelineDealId`.
 7. **Their website**, if you know it and can browse: a quick look at what they do, so "About you" is right.
 
 Update the client's `sources`, `contact`, `summary` and `scannedAt` as you go.
@@ -72,7 +72,7 @@ If this client already has a proposal: write a new one (a new id), don't overwri
 2. Mark the request `done`, with `doneAt` and `proposalId`.
 3. Update `checkIn.proposalsWritten` (add 1) and add an `activity` line (`type: "written"`).
 4. Save safely (read right before writing, write the whole file, read it back and check it parses).
-5. If Task List OS is attached, add a suggested task: "Check the proposal for <client>" with `source.tool: "proposals"` and the proposal id.
+5. If Agentic Task List is attached, add a suggested task: "Check the proposal for <client>" with `source.tool: "proposals"` and the proposal id.
 6. If someone is in the conversation with you, tell them in 2 lines: it's ready on the Proposals page, which option you recommended and why, and anything in "Needs a price" or "Claude couldn't find" for them to look at.
 
 ## Rules that never bend

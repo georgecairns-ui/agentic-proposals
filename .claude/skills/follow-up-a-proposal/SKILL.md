@@ -16,7 +16,7 @@ A sent proposal with no reply is usually a busy client, not a no. A good follow-
    - `body`: short (under 80 words), warm, specific. A real reason to get in touch now: something from their folder or calls (a deadline they mentioned, the start date they wanted, a question they asked), not "just checking in". One easy next step ("Shall I hold the week of the 3rd for you?", "Would a 15 minute call help?"). Their voice, from `context/voice.md`, following `.claude/skills/human-email`. Their sign-off.
    - `why`: one sentence the app shows: why now.
    - The second follow-up (if a first was opened 7 or more days ago and still nothing): even shorter, and give them an easy way out ("If now isn't the right time, just say and I'll check back in the new year"). After 2, stop writing them and suggest they mark it lost or leave it.
-4. If Task List OS is attached, add a suggested task "Follow up the proposal to <client>" with `source.tool: "proposals"` and the proposal id, unless one is already there.
+4. If Agentic Task List is attached, add a suggested task "Follow up the proposal to <client>" with `source.tool: "proposals"` and the proposal id, unless one is already there.
 5. Save safely: read right before writing, write the whole file, read it back and check it parses.
 6. If someone is in the conversation, list who's due a follow-up, one line each, and tell them to press **Open the follow-up** on the proposal.
 

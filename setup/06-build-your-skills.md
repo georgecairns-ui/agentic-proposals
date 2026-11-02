@@ -4,7 +4,7 @@
 
 Goal: 3 to 5 skills written for this business, saved twice: in `.claude/skills/` so they work here straight away, and as files in `skills-to-upload/` that they add to Claude, so the same know-how works in every Claude conversation, on their phone and on the web. This is the moment they see Claude learn their business, so make it feel like a gift, not homework.
 
-A skill is a short set of instructions Claude follows for one job. The ones that come with Proposal Writing OS are general. These are about **their** services, **their** prices and **their** way of selling.
+A skill is a short set of instructions Claude follows for one job. The ones that come with Agentic Proposals are general. These are about **their** services, **their** prices and **their** way of selling.
 
 ## 9.1 Ask about their services
 
@@ -21,7 +21,7 @@ Write their answers into `context/business.md` (under "Services") and `context/r
 
 ## 9.2 Suggest the skills
 
-From their answers, `context/sales.md` and what you learned getting to know the business, suggest 3 to 5 skills, one line each, and ask which to build (the default is all of them). Choose from what this business actually does. For Proposal Writing OS, their proposal skill is already built (`build-my-proposal-skill`); suggest ones that sit around it. Good candidates:
+From their answers, `context/sales.md` and what you learned getting to know the business, suggest 3 to 5 skills, one line each, and ask which to build (the default is all of them). Choose from what this business actually does. For Agentic Proposals, their proposal skill is already built (`build-my-proposal-skill`); suggest ones that sit around it. Good candidates:
 
 - **Answer an objection**: their honest answers to the worries they hear most about a proposal (price, timing, "we'll do it ourselves"), from their emails and calls.
 - **Their services**: what they sell, who for, prices and what's included, and how to answer an enquiry about each one.
@@ -54,7 +54,7 @@ description: <what it does and when to use it, in 1 or 2 sentences, under 1,000 
 
 **Make each one stand on its own.** Uploaded to Claude, a skill can't see this folder, so never point at `context/` or `apps/`. Copy the facts it needs into the skill itself: the prices, the steps, the tone. Use their real details, never placeholders. If you don't know a price, write what they told you ("priced per project, usually £800 to £1,500") rather than inventing one. Keep each skill under 200 lines.
 
-If `.claude/skills/` and `skills-to-upload/` already hold skills you built for them (for example with Task List OS), add to them. Never replace or rewrite one they already have; build only what's new.
+If `.claude/skills/` and `skills-to-upload/` already hold skills you built for them (for example with Agentic Task List), add to them. Never replace or rewrite one they already have; build only what's new.
 
 Save each skill in 2 places:
 
@@ -69,7 +69,7 @@ Try one straight away on something real, so they see it work. For example, draft
 
 Then tell them, in your own words:
 
-> I've built you 2 more skills: welcoming a new client and answering a quote request. They already work here. I've also saved them in the **skills-to-upload** folder inside Proposal Writing OS, so you can add them to Claude and use them everywhere, including the Claude app on your phone.
+> I've built you 2 more skills: welcoming a new client and answering a quote request. They already work here. I've also saved them in the **skills-to-upload** folder inside Agentic Proposals, so you can add them to Claude and use them everywhere, including the Claude app on your phone.
 >
 > To add them: open Claude (claude.ai or the Claude app) and go to **Customize**, then **Skills**. Press **+**, then **Create skill**, then **Upload a skill**, and choose a file from the skills-to-upload folder. Do it once for each file. It takes about a minute.
 

@@ -2,7 +2,7 @@
   "tools": [
     {
       "id": "proposals",
-      "name": "Proposal Writing OS",
+      "name": "Agentic Proposals",
       "app": "apps/proposals/",
       "dataFiles": ["apps/proposals/data/proposals.json"]
     }

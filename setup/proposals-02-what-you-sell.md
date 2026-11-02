@@ -8,7 +8,7 @@ Do the work first; they correct it. Don't make them type a price list out.
 
 From their website (services and pricing pages), their brand guidelines, any proposals they dropped in during step 1, and (if email is already connected) recent quotes in their sent email, draft:
 
-1. **What they sell, who to, and the problems they solve.** 3 or 4 lines. (If `context/sales.md` is already filled in, for example by Pipeline OS, use it and skip this.)
+1. **What they sell, who to, and the problems they solve.** 3 or 4 lines. (If `context/sales.md` is already filled in, for example by Agentic Pipeline, use it and skip this.)
 2. **Their packages**: for each, a name, one sentence on what it is, who it's best for, what's included (3 to 6 short lines), how long it takes, and the price with how it's charged (one-off, a month, a year, a day, an hour). Only prices you actually found. If a price isn't public, leave it blank for them.
 3. **Extras** they offer on top, with prices if you found them.
 4. **How they deliver**: the stages from yes to done, roughly how long each takes, who the client deals with, how often they check in.
