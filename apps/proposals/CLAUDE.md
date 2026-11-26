@@ -48,7 +48,7 @@ The routines live as skills in `.claude/skills/`: `write-a-proposal` (the main o
 | `chaseAfterDays` | Days after sending before you write a follow-up. |
 | `autoWrite` | `true`: when you find a new client folder with enough in it, write the proposal straight away. `false`: mark it ready and leave it for them to press Write proposal. |
 | `clientsFolder` | Where client folders live, inside this kit. Default `files/02-clients`. If their client folders are somewhere else (Google Drive, Dropbox, OneDrive), see "Client folders" below. |
-| `emailProvider` | Where the covering email and follow-ups open: `gmail`, `outlook-work`, `outlook-personal` or `other`. |
+| `emailProvider` | Where the covering email and follow-ups open: `gmail`, `outlook-work`, `outlook-personal` or `other`, for their main work inbox. An email's own `provider` wins over it (see `coverEmail` below). |
 | `proposalsSetUp` | `true` once setup has filled in their packages and how they write proposals. |
 | `signOff` | `{ "name", "role", "email", "phone" }`: who signs the proposals. Shown on the cover, under the opening note and in Next steps. |
 | `brand` | `{ "logo", "logoOnColour", "website", "cover", "setUp" }`. `logo` is a path inside `apps/`, for example `shared/images/brand-logo.svg` or `proposals/brand/logo.png`. `logoOnColour` is a light version for a coloured cover (optional). `cover` is `colour` (the cover filled with their main colour) or `light` (white with a band of colour). The colours and fonts are in `brand/brand.css` (see `.claude/skills/match-my-brand` and `setup/proposals-01-your-brand.md`). |
@@ -125,6 +125,7 @@ An extra is the same, smaller: `{ "id": "x-photo-day", "name": "Photography day"
 | `investment.extras` | Extras from `extras` that fit this client, by `extraId`, with `qty`. Never put a price here. `snapshot` is a copy of the extra's name, price and billing kept by the app once a proposal is approved or sent; never set or change it. |
 | `coverEmail` | The short email they send with the PDF, in their voice (`.claude/skills/human-email`, `context/voice.md`). They open it from the app and attach the PDF themselves. |
 | `followUp` | Written by `follow-up-a-proposal` once a sent proposal has had no reply for `chaseAfterDays`. |
+| `from`, `provider` (in `coverEmail` and `followUp`) | With more than one inbox, the email notes the address the client wrote to, and the app tells them to send it from there: add `"from": "<that address>"` and, when that inbox's provider isn't `settings.emailProvider`, `"provider"` (`gmail`, `outlook-work`, `outlook-personal` or `other`), so the email opens in the right place. |
 | `gaps` | Things a good proposal needs that nobody said. The app shows them for the person to fill in. |
 | `unpriced` | What the client asked for that isn't on their price list. Leave it out of the options and say so here. |
 | `sources` | What you read to write it: the file inside the client folder (or "Emails with Dev, Gmail") and one line on what it gave you. |

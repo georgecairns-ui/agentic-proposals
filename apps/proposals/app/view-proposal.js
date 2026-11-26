@@ -31,7 +31,7 @@
     if (!M.needsChase(d, p)) return "";
     if (p.followUp && p.followUp.body) {
       return '<section class="panel rail-box">' + C.sectionHead("Time for a nudge", { icon: "hourglass" }) +
-        '<p class="muted">Sent ' + esc(C.ago(p.sentAt)) + ". " + esc(p.followUp.why || "Claude has written a friendly follow-up.") + "</p>" +
+        '<p class="muted">Sent ' + esc(C.ago(p.sentAt)) + ". " + esc(p.followUp.why || "Claude has written a friendly follow-up.") + (p.followUp.from ? " Send it from " + esc(p.followUp.from) + ", the address they wrote to." : "") + "</p>" +
         '<button type="button" class="btn btn--primary btn--sm" data-action="follow-up">' + icon("mail") + "Open the follow-up</button></section>";
     }
     return '<section class="panel rail-box">' + C.sectionHead("Time for a nudge", { icon: "hourglass" }) +

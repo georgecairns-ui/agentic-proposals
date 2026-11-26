@@ -22,12 +22,12 @@ Check these yourself. Fix anything that fails, then check again.
 **Connections and notes**
 - [ ] `context/sales.md` and `context/proposals.md` say "Status: filled in". If not, setup isn't finished: go back to step 3.
 - [ ] Every connected app is in `context/tools.md` with what you may and may not do.
-- [ ] Email is `connected` in `apps/home/data/connections.json` with a checked date from this setup, or `no-connector`, said plainly.
-- [ ] Calendar is checked the same way, separately: `connected` with a checked date from this setup, or `no-connector`, said plainly. (When they come from different providers, each has its own row.)
-- [ ] Their call recorder, and the cloud drive their client files live in (step 8) if there is one, is `connected`, `export-only`, `no-connector` or `needs-attention`. Other apps they named may stay `not-connected` with the note "Chose not to connect yet".
-- [ ] `files/02-clients/_found-in-email/` is gone: every summary from step 5 is in a client's folder or in `files/99-archive/found-in-email/`.
+- [ ] Every inbox is `connected` in `apps/home/data/connections.json` with a checked date from this setup, `no-connector` (said plainly), or `waiting` with `waitingOn` and the one thing still to do in `note`.
+- [ ] Calendar is checked the same way, separately: `connected` with a checked date from this setup, `no-connector` (said plainly) or `waiting`. (When they come from different providers, each has its own row.)
+- [ ] Their call recorder, the cloud drive their client files live in (step 8) if there is one, and every app they already use that step 8 connected, is `connected`, `export-only`, `no-connector`, `waiting` or `needs-attention`. Other apps they named may stay `not-connected` with the note "Chose not to connect yet".
+- [ ] `files/02-clients/_found-in-email/` is gone: every summary from step 5 is in a client's folder or in `files/99-archive/found-in-email/`. (No inbox connected yet: there were no summaries, and that's fine.)
 - [ ] The check-in task exists (`list_scheduled_tasks`) and its first run finished without stopping, or they said no to it.
-- [ ] Every other `context/` file says "Status: filled in", or `setup/progress.md` says why not.
+- [ ] Every other `context/` file says "Status: filled in", or `setup/progress.md` says why not. `context/goal.md` has their goal with the numbers.
 
 **Their skills**
 - [ ] Their proposal skill (`settings.ownSkill`) and any others are in `.claude/skills/<name>/SKILL.md` and as `skills-to-upload/<name>.zip`, and each zip opens to a `<name>` folder with `SKILL.md` inside.
@@ -58,9 +58,12 @@ Mention it once. Never suggest Agentic Proposals is broken without it.
 
 1. In `setup/progress.md`, change "Setup status" to `complete on <date>` and tick the last step.
 2. In `CLAUDE.md`, change `Setup: not done yet` to `Setup: complete on <date>`.
-3. Tell them what you did, as a short list with real numbers. For example: "Read your website and 2 old proposals. Put your brand on the app and your proposals. Set up 4 packages and 3 extras. Connected Gmail and Fathom. Set up 6 client folders from 41 emails and 5 calls. Wrote your first proposal, for Hollins Lettings. Built your proposal skill." Add, in one line each: how many emails from the last 30 days you read, how many clients and proposals already sent you found in them, which apps are connected, and which are export-only.
-4. Remind them about their skills in one line: they're in the **skills-to-upload** folder, and adding them to Claude (Customize, then Skills) means they work in every conversation, including on their phone.
-5. Then tell them, briefly:
+3. Start with their goal, in one line: what they want to achieve (from `context/goal.md`) and that everything here is set up to help with it. Then tell them what you did, as a short list with real numbers. For example: "Read your website and 2 old proposals. Put your brand on the app and your proposals. Set up 4 packages and 3 extras. Connected Gmail and Fathom. Set up 6 client folders from 41 emails and 5 calls. Wrote your first proposal, for Hollins Lettings. Built your proposal skill." Add, in one line each: how many emails from the last 30 days you read, how many clients and proposals already sent you found in them, which apps are connected, and which are export-only.
+4. **Anything still waiting.** List every `waiting` connection with the one thing to do next: "Microsoft 365 is waiting on your IT team to approve it. When they have, press Finish connecting on Home, or tell me, and I'll read its last 30 days then."
+5. **Files you said you'd share.** List any still `to find` in `setup/progress.md`, by name.
+6. **Joining up the rest.** If anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link next to each one.
+7. Remind them about their skills in one line: they're in the **skills-to-upload** folder, and adding them to Claude (Customize, then Skills) means they work in every conversation, including on their phone.
+8. Then tell them, briefly:
    - That nothing goes out without them: you write, they approve, save the PDF and send it.
    - Their link, **http://localhost:4747**, and whether it starts with their computer.
    - The one habit that makes it work: **everything about a client goes in their folder** (or tell Claude, or press Brain dump). Then press **Write proposal**.
@@ -68,3 +71,4 @@ Mention it once. Never suggest Agentic Proposals is broken without it.
    - The phrases that do most of the work: "write a proposal for...", "make it shorter", "chase Marlow", "rebuild my proposal skill". In Claude Code each skill also works as a command, for example `/write-a-proposal`.
    - That they can change their packages and prices on the **Packages** page, and the sections and sign-off in **Preferences**.
    - That they can say "get the latest version" any time and you will bring the app up to date, keeping everything of theirs.
+9. Offer the 10-minute "how to use Claude day to day" lesson from `setup/learn-as-you-go.md`, in every guide mode. If they say no, tell them they can say "show me how to use Claude" any time.
