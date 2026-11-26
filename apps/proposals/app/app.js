@@ -489,14 +489,14 @@
         if (!p || !p.coverEmail) break;
         openEmail(p.coverEmail, function () {
           change(function (d) { mut.coverEmailOpened(d, proposalId); });
-          ui.toast("Your email is open. Attach the PDF, check it and press send", { icon: "mail", duration: 10000, actionLabel: "I sent it", onAction: function () { setStatus(proposalId, "sent"); } });
+          ui.toast("Your email is open" + (p.coverEmail.from ? ". Send it from " + p.coverEmail.from : "") + ". Attach the PDF, check it and press send", { icon: "mail", duration: 10000, actionLabel: "I sent it", onAction: function () { setStatus(proposalId, "sent"); } });
         });
         break;
       }
       case "follow-up": {
         const p = M.proposalById(data, proposalId);
         if (!p || !p.followUp) break;
-        openEmail(p.followUp, function () { change(function (d) { mut.followUpOpened(d, proposalId); }); ui.toast("Your follow-up is open. Check it and press send", { icon: "mail", duration: 7000 }); });
+        openEmail(p.followUp, function () { change(function (d) { mut.followUpOpened(d, proposalId); }); ui.toast("Your follow-up is open" + (p.followUp.from ? ". Send it from " + p.followUp.from : "") + ". Check it and press send", { icon: "mail", duration: 7000 }); });
         break;
       }
       case "recommend": change(function (d) { mut.setRecommended(d, proposalId, Number(btn.getAttribute("data-index"))); }).then(function () { ui.toast("Recommended option changed"); }); break;

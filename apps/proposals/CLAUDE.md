@@ -125,7 +125,7 @@ An extra is the same, smaller: `{ "id": "x-photo-day", "name": "Photography day"
 | `investment.extras` | Extras from `extras` that fit this client, by `extraId`, with `qty`. Never put a price here. `snapshot` is a copy of the extra's name, price and billing kept by the app once a proposal is approved or sent; never set or change it. |
 | `coverEmail` | The short email they send with the PDF, in their voice (`.claude/skills/human-email`, `context/voice.md`). They open it from the app and attach the PDF themselves. |
 | `followUp` | Written by `follow-up-a-proposal` once a sent proposal has had no reply for `chaseAfterDays`. |
-| `from`, `provider` (in `coverEmail` and `followUp`) | With more than one inbox, the email goes from the address the client wrote to: add `"from": "<that address>"` and, when that inbox's provider isn't `settings.emailProvider`, `"provider"` (`gmail`, `outlook-work`, `outlook-personal` or `other`), so the email opens in the right place. |
+| `from`, `provider` (in `coverEmail` and `followUp`) | With more than one inbox, the email notes the address the client wrote to, and the app tells them to send it from there: add `"from": "<that address>"` and, when that inbox's provider isn't `settings.emailProvider`, `"provider"` (`gmail`, `outlook-work`, `outlook-personal` or `other`), so the email opens in the right place. |
 | `gaps` | Things a good proposal needs that nobody said. The app shows them for the person to fill in. |
 | `unpriced` | What the client asked for that isn't on their price list. Leave it out of the options and say so here. |
 | `sources` | What you read to write it: the file inside the client folder (or "Emails with Dev, Gmail") and one line on what it gave you. |

@@ -25,7 +25,7 @@ Check these yourself. Fix anything that fails, then check again.
 - [ ] Every inbox is `connected` in `apps/home/data/connections.json` with a checked date from this setup, `no-connector` (said plainly), or `waiting` with `waitingOn` and the one thing still to do in `note`.
 - [ ] Calendar is checked the same way, separately: `connected` with a checked date from this setup, `no-connector` (said plainly) or `waiting`. (When they come from different providers, each has its own row.)
 - [ ] Their call recorder, the cloud drive their client files live in (step 8) if there is one, and every app they already use that step 8 connected, is `connected`, `export-only`, `no-connector`, `waiting` or `needs-attention`. Other apps they named may stay `not-connected` with the note "Chose not to connect yet".
-- [ ] `files/02-clients/_found-in-email/` is gone: every summary from step 5 is in a client's folder or in `files/99-archive/found-in-email/`.
+- [ ] `files/02-clients/_found-in-email/` is gone: every summary from step 5 is in a client's folder or in `files/99-archive/found-in-email/`. (No inbox connected yet: there were no summaries, and that's fine.)
 - [ ] The check-in task exists (`list_scheduled_tasks`) and its first run finished without stopping, or they said no to it.
 - [ ] Every other `context/` file says "Status: filled in", or `setup/progress.md` says why not. `context/goal.md` has their goal with the numbers.
 

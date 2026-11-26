@@ -10,8 +10,8 @@ Then list back every address from step 1 in one short table, and check it with t
 
 | Address | Where it lives | Can I connect it? |
 |---|---|---|
-| james@cloudsocials.example | Outlook, work account (Microsoft 365) | Yes, with the Microsoft 365 connection. Your IT team may need to approve it |
-| james.thorpe@gmail.example | Gmail | Yes, with the Gmail connection |
+| sam@fernandfinch.example | Outlook, work account (Microsoft 365) | Yes, with the Microsoft 365 connection. Your IT team may need to approve it |
+| sam.ellis@gmail.example | Gmail | Yes, with the Gmail connection |
 
 Add the calendar too, if it's somewhere else. If there's only one address, one line will do.
 
@@ -41,7 +41,7 @@ Then look up this session's connections (`session_connectors_status`) and act on
 
 Keep going round this table until each one is on, or parked as `waiting`. Never ask for their email password: they sign in on Google's or Microsoft's own screen.
 
-If the same connector can only be signed in to one account at a time and they have 2 addresses there, connect the main one and treat the other as having no connector of its own (5.5): it forwards into the connected one.
+Some connectors take one account at a time (Microsoft 365 connects one Microsoft account at a time). When they have 2 addresses on the same connector, connect the main one and treat the other as having no connector of its own (5.5): it forwards into the connected one.
 
 ## 5.3 Prove it
 
@@ -60,7 +60,7 @@ Tell them first: "I'll now read the last 30 days of your email, to find the clie
 3. Open only the threads from real people, in batches. After each batch, one progress line: "Read 140 of 380 conversations, 6 clients so far."
 4. **Clients and prospects:** anyone they're quoting, scoping or discussing work with, the same people step 8 sets up a folder for (`setup/proposals-04-your-client-folders.md`). For each one, save a short summary as `files/02-clients/_found-in-email/<Client Name>.md`, in the form step 8 uses for `Emails with <name>.md`: who they are, the contact (name, role, email), what they asked for, and what they **confirmed in writing** (budget, scope, dates, who decides) at the top, with their exact words where they matter. If that file already exists (a resumed setup), add to it instead of overwriting it: keep what is there and add what's new. Never whole threads. The folder starts with `_`, so the app doesn't treat it as a client; step 8 moves each summary into the right client's folder.
 5. **Proposals already sent:** in their sent email, a proposal or quote they sent a client (an attachment with "proposal" or "quote" in its name, or an email that sets out options and prices). Add it to that client's summary: the date sent, the file name, what it offered and the prices as written, and whether the client has replied since. Don't add it to the app: it isn't one of the proposals you wrote.
-6. Calendar: don't copy any events (Agentic Proposals has no calendar). Read the last 30 days of the calendar only to learn who they meet and what's recurring: add "met on <date>" to the summary of any client they met, and note their usual working days and hours in `context/routines.md`.
+6. Calendar: don't copy any events (Agentic Proposals has no calendar). Read the last 30 days of every connected calendar, merged into one list, only to learn who they meet and what's recurring: add "met on <date>" to the summary of any client they met, and note their usual working days and hours in `context/routines.md`.
 
 Every tool reads them as one inbox from now on. Keep the counts for the hand-over (emails read, clients found, proposals already sent). Nothing is sent, labelled, archived or marked as read.
 
@@ -90,5 +90,5 @@ In `context/tools.md` ("Connected apps"): each inbox and calendar, how connected
 
 - Read only what a proposal needs: emails with that client. Don't read more than you need.
 - Never send, reply, forward, delete, archive, label, mark as read, unsubscribe or accept an invite, even though the connection technically allows some of these.
-- The covering email and follow-ups live on the proposal in the app; the person opens them in their email and sends them. Each goes from the address the client wrote to. Save a draft into their mailbox only if they ask for that specific email.
+- The covering email and follow-ups live on the proposal in the app; the person opens them in their email and sends them. Each notes the address the client wrote to (`from`), and the app tells them to send it from there. Save a draft into their mailbox only if they ask for that specific email.
 - Don't copy whole private emails into this folder. A short summary with the key facts and exact words that matter, in the client's folder, is enough.

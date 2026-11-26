@@ -4,7 +4,7 @@ Goal: a folder for every current client or prospect who might need a proposal, e
 
 ## 8.1 Where the folders live
 
-From step 1, question 6:
+From step 1, question 5:
 
 - **Nowhere in particular, or a mix**: use `files/02-clients/` in this folder (the default, `settings.clientsFolder`).
 - **A folder per client already, on this computer** (Documents, Desktop, a synced Google Drive, OneDrive or Dropbox folder): ask whether to use it where it is or copy it in.
