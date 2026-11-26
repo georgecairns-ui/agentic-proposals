@@ -6,7 +6,7 @@ Goal: short, accurate notes in `context/` so your proposals sound like them and 
 
 ## 7.1 Work it out first
 
-With the connections from steps 5 and 6, quietly gather:
+Start from what you found and they confirmed in `setup/first-questions.md` (section 3), and their goal in `context/goal.md`: don't ask for any of it again. Then, with the connections from steps 5 and 6, quietly gather what's still missing:
 - From their **email**, which you read for the last 30 days in step 5 (don't read it again): who they deal with most, their clients, how they write.
 - From **calls**: how they talk about their work, and what clients ask most.
 - From their **website**: what the business does, its story, its proof (reviews, case studies, awards).
@@ -27,7 +27,7 @@ If yes, follow `.claude/skills/write-like-me` in learn mode. Pay attention to ho
 |---|---|
 | `context/business.md` | What the business does, for whom, location, website, their story in 2 lines, and their proof: reviews, results, well-known clients (only ones they're happy to name) |
 | `context/people.md` | Team and helpers, key clients, and how formal to be with each |
-| `context/priorities.md` | Ask one question: "What matters most over the next 3 months?" (It tells you which work they want more of.) |
+| `context/priorities.md` | What matters most over the next 3 months, in the light of their goal (it tells you which work they want more of). Ask only if their goal doesn't already say it |
 | `context/routines.md` | Working days and hours |
 | `context/voice.md` | From 7.2 |
 

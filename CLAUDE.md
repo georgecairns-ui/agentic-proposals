@@ -2,9 +2,15 @@
 
 This folder is the workspace of the person you work for: a small business owner. Read this file at the start of every conversation here.
 
+## Their goal
+
+Everything in this folder is here to help them reach their goal. Read `context/goal.md` before any job, and judge every suggestion, check-in and build by whether it moves them towards it. Say so when something doesn't. When the goal is met or changes, ask for the next one and update the file after a yes. If it still says "Status: not filled in yet", setup asks for it.
+
+## Setup
+
 Setup: not done yet
 
-If the line above says "not done yet", offer to run setup (they can type `/setup`): read `START-HERE.md` and follow it. If they want something else first, help with that, then offer setup again at a natural moment.
+If the line above says "not done yet", start setup straight away rather than offering it. Say one line first ("Let's get you set up, it takes about 30 to 40 minutes"), then read `START-HERE.md` and follow it from "Before you begin". Any wording that means "get this going" starts it: "install and run", "set this up", "get it going", "set me up", "/setup". If they ask for something else first, help with that, then go back to setup.
 
 > Developing Agentic Proposals itself (changing the app, the setup steps or the skills for everyone, rather than using it)? Read `maintainers/MAINTAINING.md` instead of following this file.
 
@@ -14,6 +20,7 @@ Read these before doing anything that depends on the business. They're short.
 
 | File | What it tells you |
 |---|---|
+| `context/goal.md` | What they want to achieve, with the numbers. Read it first |
 | `context/proposals.md` | **How they write proposals: when to recommend each package, how they deliver, what happens when someone says yes, their template, their standard wording, their terms.** Read it before every proposal |
 | `context/sales.md` | What they sell, who to, the problems they solve, who isn't a good fit |
 | `context/business.md` | What the business does, for whom, their story and their proof, and their brand |
@@ -40,7 +47,7 @@ If `context/proposals.md` or the packages aren't filled in, proposals can't do t
 2. **Never invent.** Every price comes from their packages (the app works out VAT and totals). Something a client wants that isn't priced is flagged, never guessed. Anything nobody said (a budget, a deadline, who decides) is a gap for them to fill. Never make up a quote, a number or a result.
 3. **Never write legal terms.** Only their own terms, word for word, and say they should be checked by a solicitor.
 4. **Nothing secret in this folder.** No passwords, keys or codes in any file here, and never ask for them in chat. See `.claude/skills/connect-a-tool`.
-   `apps/home/data/connections.json` says which apps you can reach. Only write `connected` after a real read works; check-ins keep it up to date.
+   `apps/home/data/connections.json` says which apps you can reach. Only write `connected` after a real read works; check-ins keep it up to date. A connection waiting on someone else (their IT administrator, say) is `waiting`, and you finish it when they say it's sorted.
 5. **Never delete their files, client folders or proposals** unless they ask for that specific thing. Old things go to `files/99-archive`.
 6. **Keep private things private.** Don't copy whole emails, transcripts or documents into notes or proposals. A short summary, the exact words that matter, and a pointer to the source are enough.
 
@@ -78,7 +85,9 @@ When a request matches a skill in `.claude/skills/`, read that skill's `SKILL.md
 | "Make my proposals match my brand", "use our colours on the proposals", "white cover, not coloured" | "The proposal's look" in `setup/proposals-01-your-brand.md` |
 | "Make the app match my brand", "put our logo on it" | `.claude/skills/match-my-brand` (then offer the proposals too) |
 | "Sort my brain dump", a messy note (and every note from the Brain dump button) | `.claude/skills/sort-brain-dump` (shared by every tool; it hands proposals to `sort-proposals-brain-dump`) |
-| "Set me up", "carry on setting up" | `.claude/skills/setup` |
+| "Set me up", "carry on setting up", "install and run", "set this up", "get it going" | `.claude/skills/setup` |
+| "Show me how to use Claude" | The 10-minute lesson in `setup/learn-as-you-go.md` |
+| "My goal has changed", "I've hit my goal" | Update `context/goal.md` (see "Their goal" above) |
 | "Open my proposals", "it's not loading" | `.claude/skills/open-the-app` (it starts the app for every tool in this folder) |
 | "Make this sound less robotic", any email you write | `.claude/skills/human-email` |
 | "Write it like me", "learn how I write" | `.claude/skills/write-like-me` |

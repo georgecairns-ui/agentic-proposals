@@ -38,7 +38,7 @@ You copy the kit, open it in the Claude desktop app (the Code tab) and type **/s
 ## What you need
 
 - **The Claude desktop app** (setup runs in its Code tab).
-- **A paid Claude plan (Pro or Max)**, signed in to the desktop app. Your email, calendar and call recorder connections come from your Claude account, so Claude can only use them when you're signed in.
+- **A paid Claude plan (Pro, Max, Team or Enterprise)**, signed in to the desktop app. Your email, calendar and call recorder connections come from your Claude account, so Claude can only use them when you're signed in. On Team and Enterprise, your administrator may need to approve connections, and the screens may look a little different.
 - Nothing else to install in most cases. The app runs on your own computer using Node (Claude installs it for you if it's missing, with your permission).
 - Google Chrome or Microsoft Edge for saving proposals as PDFs (any modern browser shows them).
 - About 30 to 40 minutes, once.

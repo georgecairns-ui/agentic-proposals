@@ -6,6 +6,7 @@ They're plain text. You can open and edit any of them yourself. If something's w
 
 | File | What's in it |
 |---|---|
+| `goal.md` | What you want to achieve, with the numbers. Everything else is judged by it |
 | `business.md` | What the business does, for whom, and what it sells |
 | `sales.md` | How you sell: what you sell, who you sell to, the problems you solve, who isn't a good fit |
 | `proposals.md` | How you write proposals: your template and standard wording, when to recommend each package, how you deliver, and what happens when someone says yes. Claude reads it for every proposal |

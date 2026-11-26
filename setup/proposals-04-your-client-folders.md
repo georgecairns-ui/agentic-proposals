@@ -4,13 +4,13 @@ Goal: a folder for every current client or prospect who might need a proposal, e
 
 ## 8.1 Where the folders live
 
-From step 1, question 7:
+From step 1, question 6:
 
 - **Nowhere in particular, or a mix**: use `files/02-clients/` in this folder (the default, `settings.clientsFolder`).
 - **A folder per client already, on this computer** (Documents, Desktop, a synced Google Drive, OneDrive or Dropbox folder): ask whether to use it where it is or copy it in.
   - Copy in (simplest, and the app's folder links just work): copy each client folder into `files/02-clients/`. Copy, never move.
   - Use it where it is: read it there (with their permission), and set each client's `folder` to the full path. Note it under "Where things really live" in `files/README.md`. `settings.clientsFolder` stays `files/02-clients` for new clients.
-- **Only in the cloud** (Google Drive, OneDrive or Dropbox, not synced): connect that app first (8.2), then read through the connection and save summaries into folders in `files/02-clients/` (see 8.3).
+- **Only in the cloud** (Google Drive, OneDrive or Dropbox, not synced): connect that app first (8.2), then read through the connection and save summaries into folders in `files/02-clients/` (see 8.4).
 
 ## 8.2 Connect their cloud drive (only if client files live only in the cloud)
 
@@ -24,11 +24,17 @@ Skip this part if their client folders are on this computer or nowhere in partic
 
 Follow the guide and `.claude/skills/connect-a-tool`: look up this session's connections (`session_connectors_status`), switch it on, reconnect it or point them to Connect, then prove it with one harmless read ("I can see a folder called 'Clients' with 9 folders in it").
 
-An app with no connector gets this sentence, word for word with its name: "There's no Claude connector for [app], so I can't connect to it live. If you export a CSV or PDF from it and drop it in the files folder, I'll read it whenever you ask." Record it as `export-only`, and ask them to download the client folders they want into `files/02-clients/` (or drop the files in), then use those.
+An app with no connector gets this sentence, word for word with its name: "There's no Claude connector for [app], so I can't connect to it live. If you export a CSV or PDF from it and drop it in the files folder, I'll read it whenever you ask." Record it as `export-only`, with what the app does for them in `note`, then give the one-line book-a-call offer from `.claude/skills/connect-a-tool` (part 4), once. Ask them to download the client folders they want into `files/02-clients/` (or drop the files in), then use those.
 
-Record it in `apps/home/data/connections.json` and `context/tools.md` (see `connect-a-tool`, part 3): `connected` with today's date in `checked` only after the read worked. If it still won't connect after the loop, record it as `needs-attention` (the Connections box on Home shows a Fix it button for it, so setup doesn't stall) and work from anything they can download or drop in for now.
+Record it in `apps/home/data/connections.json` and `context/tools.md` (see `connect-a-tool`, part 3): `connected` with today's date in `checked` only after the read worked. If it's waiting on someone else (their IT administrator or Claude Owner has to approve it), park it as `waiting`, with `waitingOn`, and work from anything they can download or drop in for now. If it still won't connect after the loop, record it as `needs-attention` (the Connections box on Home shows a Fix it button for it, so setup doesn't stall) and work from anything they can download or drop in for now.
 
-## 8.3 Fill the folders
+## 8.3 Join up what they already use
+
+Anything they said they already use to run the business (`setup/first-questions.md`: a CRM such as HubSpot, Pipedrive or folk, their own dashboards, a task app) is connected here, so their client folders join up with it rather than replacing it. Do this even if you skipped 8.2. Ask before connecting each one.
+
+For each, follow its guide (`setup/connections/README.md` lists them) and `.claude/skills/connect-a-tool`, then prove it with one harmless read ("I can see 14 contacts tagged as clients"). An app with no connector gets the sentence in 8.2, is recorded as `export-only` with what the app does for them in `note`, and gets the one-line book-a-call offer from `.claude/skills/connect-a-tool` (part 4), once. An app that's waiting on someone else (their Claude Owner has to add it, say) is parked as `waiting`, and you go on to the next app. Record each one as in 8.2.
+
+## 8.4 Fill the folders
 
 Find their current clients and prospects. Step 5 already read the last 30 days of their email and saved a summary for each client or prospect it found in `files/02-clients/_found-in-email/`, with any proposal they've already sent. Don't read their email again for this: use those summaries, plus their calls, Agentic Pipeline if it's attached, and any client folders they already have. If step 5 found no email (their email was recorded `no-connector`, or they declined to connect it), there are no summaries: ask them "Who are you writing proposals for at the moment?" and use the names they give, with their calls, Agentic Pipeline and any client folders. Show them the list in one message, saying which ones already had a proposal from them, and ask which are live:
 
@@ -45,7 +51,7 @@ For each one they say yes to:
 
 When every live client has its summary, move what's left in `files/02-clients/_found-in-email/` (the ones they said aren't live) into `files/99-archive/found-in-email/`, so nothing is lost, and remove the empty `_found-in-email` folder.
 
-## 8.4 Tell them the habit
+## 8.5 Tell them the habit
 
 > From now on, anything about a client goes in their folder: notes after a call, their brief, a screenshot, anything. Or just tell me, or press Brain dump in the app and talk. When you want a proposal, press **Write proposal** on the Clients page. That's it.
 

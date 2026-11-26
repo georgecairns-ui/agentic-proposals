@@ -427,8 +427,10 @@
     });
   }
 
+  // An email can carry its own provider: one to a client who wrote to a second inbox opens there
   function openEmail(email, after) {
-    L.open(L.composeUrl(email, data.settings.emailProvider || "gmail"));
+    const provider = (email && email.provider) || data.settings.emailProvider || "gmail";
+    L.open(L.composeUrl(email, provider));
     if (after) after();
   }
 

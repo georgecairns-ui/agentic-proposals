@@ -10,8 +10,8 @@ A sent proposal with no reply is usually a busy client, not a no. A good follow-
 ## Steps
 
 1. Read `apps/proposals/data/proposals.json`. Find proposals with `status: "sent"` where `sentAt` is at least `settings.chaseAfterDays` days ago (or the one they named).
-2. For each one, check whether the client has already replied: if email is connected, search for messages from the contact since `sentAt`. If they replied, don't write a follow-up: tell the person what they said in one line, and if it's a clear yes or no, suggest marking it won or lost (never mark it yourself).
-3. If there's no reply and no `followUp` written in the last `chaseAfterDays` days, write one into `followUp`: `{ "to", "subject", "body", "why", "createdAt" }`.
+2. For each one, check whether the client has already replied: if email is connected, search every connected inbox for messages from the contact since `sentAt`. If they replied, don't write a follow-up: tell the person what they said in one line, and if it's a clear yes or no, suggest marking it won or lost (never mark it yourself).
+3. If there's no reply and no `followUp` written in the last `chaseAfterDays` days, write one into `followUp`: `{ "to", "subject", "body", "why", "createdAt" }`, plus `from` and `provider` copied from the covering email when it has them.
    - `subject`: a reply to the covering email's subject ("Re: Your website proposal").
    - `body`: short (under 80 words), warm, specific. A real reason to get in touch now: something from their folder or calls (a deadline they mentioned, the start date they wanted, a question they asked), not "just checking in". One easy next step ("Shall I hold the week of the 3rd for you?", "Would a 15 minute call help?"). Their voice, from `context/voice.md`, following `.claude/skills/human-email`. Their sign-off.
    - `why`: one sentence the app shows: why now.

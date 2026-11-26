@@ -2,7 +2,7 @@
   "id": "proposals",
   "name": "Agentic Proposals",
   "version": "1.0.0",
-  "sharedVersion": "13",
+  "sharedVersion": "14",
   "attachingVersion": "4",
   "app": "apps/proposals/",
   "dataFiles": [

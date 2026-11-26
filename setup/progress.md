@@ -6,6 +6,8 @@ Setup status: not started
 
 Guide mode: not asked yet
 
+Claude plan: not asked yet
+
 - [ ] 1. Quick questions
 - [ ] 2. Your brand
 - [ ] 3. What you sell (required)
@@ -18,6 +20,10 @@ Guide mode: not asked yet
 - [ ] 10. Your first proposal
 - [ ] 11. Make it automatic
 - [ ] 12. Check and hand over
+
+## Files you said you'd share
+
+(Claude: each file they said they'd share, what it's for, and `to find`, `found` or `added`. See `setup/first-questions.md`, section 4.)
 
 ## Notes for next time
 

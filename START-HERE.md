@@ -1,6 +1,6 @@
 # Start here
 
-> **If you're a person reading this:** you don't need to do anything in this file. Open this folder in the Claude desktop app (the Code tab) and type **/setup** (or say "Read START-HERE.md and set me up"). Claude asks for your website, logo and colours, your packages and prices, and any proposal you'd like it to copy, connects your email, calendar and call recorder, then writes your first proposal from a real client. Most people are done in 30 to 40 minutes. The first time you open the folder, the app asks whether you trust it: choose **Yes, I trust this folder**. That lets Claude write your proposals and notes without asking every time; it still can't send or delete anything.
+> **If you're a person reading this:** you don't need to do anything in this file. Open this folder in the Claude desktop app (the Code tab). Setup starts on its own; if it doesn't, type **/setup** (or say "set me up"). Claude asks for your website, logo and colours, your packages and prices, and any proposal you'd like it to copy, connects your email, calendar and call recorder, then writes your first proposal from a real client. Most people are done in 30 to 40 minutes. The first time you open the folder, the app asks whether you trust it: choose **Yes, I trust this folder**. That lets Claude write your proposals and notes without asking every time; it still can't send or delete anything.
 
 ---
 
@@ -38,11 +38,13 @@ This folder is their workspace from now on: `context/` holds what you know about
 
    | Guide mode | How you guide |
    |---|---|
-   | beginner | One step per message. Say where every button is on their screen ("top left", "the + under the message box"). Plain words only: "connection", never MCP, API, JSON or repo. Check each thing worked before the next, and say what you just did |
+   | beginner | One step per message. Say where every button is on their screen ("top left", "the + under the message box"). Plain words only: "connection", never MCP, API, JSON or repo. Check each thing worked before the next, and say what you just did. End each step with one "You just learned" line from `setup/learn-as-you-go.md` |
    | some | 2 or 3 steps per message, and a check after each connection |
    | confident | Batch it, email and calendar first, then the rest: "Connect your email and calendar, then your call recorder, in Connectors, and tell me when they're done", then check them all at once |
 
-   The guide mode changes the pace and how much you explain. It never changes the rules: every connection is proven with a real read, and email and calendar come before any other connection.
+   The guide mode changes the pace and how much you explain. It never changes the rules: every connection is proven with a real read, and you ask about email and calendar before any other connection.
+
+   Straight after the guide mode question (or, if it was already answered, in your first message), say this line: "Tell me anything as we go, even small stuff, the way you'd tell a colleague. 'My IT team has to approve that' or 'I use 2 emails' is exactly what I need."
 3. Read `setup/progress.md`. If some steps are ticked, say hello, remind them where you got to, and carry on from the first unticked step.
 4. Read `CLAUDE.md` in this folder: the standing rules.
 5. If setup is already complete, don't run it again. Ask what they'd like to do.
@@ -51,14 +53,14 @@ This folder is their workspace from now on: `context/` holds what you know about
 
 | Step | File | What happens | Their time |
 |---|---|---|---|
-| 1 | `setup/01-quick-questions.md` | One message of quick questions: their website, logo and colours, email, call recorder, any proposal templates, where client files live | 2 min |
+| 1 | `setup/01-quick-questions.md` | `setup/first-questions.md` first (their plan, files, email addresses, what they already use, their goal, then you look for the rest yourself and show them what you found), then a few quick questions of your own: their website, logo and colours, call recorder, any proposal templates, where client files live | 5 min |
 | 2 | `setup/proposals-01-your-brand.md` | You learn their brand from their website and logo and put it on the app and every proposal. They say yes or tweak it | 2 min |
 | 3 | `setup/proposals-02-what-you-sell.md` | **Required.** Their packages and prices, VAT, payment terms, how they deliver and what happens when someone says yes. You draft it all from their website first; they correct it | 5 min |
 | 4 | `setup/proposals-03-your-templates.md` | Import any proposal or template they'd like you to copy | 2 min |
-| 5 | `setup/02-connect-email-and-calendar.md` | Connect email and calendar, prove both, and read the last 30 days to find their clients and the proposals they've sent | 5 to 10 min |
+| 5 | `setup/02-connect-email-and-calendar.md` | Connect every inbox and calendar, prove each, and read the last 30 days to find their clients and the proposals they've sent. One waiting on their IT team is parked, not a reason to stop | 5 to 10 min |
 | 6 | `setup/03-connect-call-recordings.md` | Connect their call recorder, if they have one | 2 min |
 | 7 | `setup/05-get-to-know-the-business.md` | Fill in the rest of your notes and learn how they write | 3 min |
-| 8 | `setup/proposals-04-your-client-folders.md` | Set up a folder per client from the clients found in step 5, and fill each from their email, calls and files (connecting their files app if client files live in the cloud) | 2 min |
+| 8 | `setup/proposals-04-your-client-folders.md` | Set up a folder per client from the clients found in step 5, and fill each from their email, calls and files (connecting their files app if client files live in the cloud, and the apps they already use, such as their CRM) | 2 min |
 | 9 | `setup/proposals-05-your-proposal-skill.md` | Build their own proposal skill, saved here and packed in `skills-to-upload/` | 2 min |
 | 10 | `setup/proposals-06-first-proposal.md` | Write a real proposal for their most ready client, start the app and give them the link | 3 min |
 | 11 | `setup/08-make-it-automatic.md` | You agree the check-in times (or they skip it), Claude lets check-ins read without stopping, creates the check-in and proves it runs | 2 min |
@@ -70,7 +72,9 @@ Start by telling them what's about to happen, in 3 short lines: you'll learn the
 
 This setup is their first proper look at what Claude can do. Do as much as you can yourself, ask as little as possible, and keep a running count of what you've done (pages of their website read, packages set up, emails and calls read, client folders filled, proposals written, skills built) for the hand-over.
 
-After each step: tick it in `setup/progress.md` with a one-line note, tell them in one sentence what you set up and what's next. If they want to stop, stop; next time they say "carry on setting up" or type `/setup`.
+After each step: tick it in `setup/progress.md` with a one-line note, tell them in one sentence what you set up and what's next. In beginner mode, add the "You just learned" line for that step (`setup/learn-as-you-go.md`). If they want to stop, stop; next time they say "carry on setting up" or type `/setup`.
+
+Whenever they hesitate, skip a question, say "I don't know" or hit a blocker, invite them to tell you more, in one line that fits the moment: "What's getting in the way? Tell me like you'd tell me over a coffee."
 
 ## Ground rules for the whole setup
 
@@ -80,6 +84,8 @@ These don't bend, whatever is asked later.
 - **No made-up prices, numbers or promises.** Prices only from their packages. Anything nobody said is a gap for them to fill, never a guess. Legal terms only ever their own, word for word; you never write terms.
 - **No passwords or keys in chat or in this folder.** People sign in on each app's own screen, through Claude's Connectors. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Agentic Money View and the Agentic Command Centre. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Agentic Money View.)
 - **Only connect what helps.** Email and a call recorder are the 2 that matter most. Ask before connecting anything.
+- **Waiting on someone else doesn't stop setup.** When a connection needs their IT administrator, their Claude Owner or a password reset, park it as `waiting` (`.claude/skills/connect-a-tool`, "Waiting on someone else"), connect what they can now, and go on to the next step.
+- **Keep track of what they promise to share.** Every file they say they'll share goes under "Files you said you'd share" in `setup/progress.md`. Look for it yourself first, and repeat the list back before each new step (`setup/first-questions.md`, section 4).
 - **Be honest about what you can reach.** Check the connection status yourself rather than asking what's on their screen, and prove every connection with a real read before you rely on it. Not every call has a transcript. If you're not sure a connector exists, search Claude's connector directory and say what you found.
 
 ## How to talk to them
